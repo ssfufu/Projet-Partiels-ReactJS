@@ -4,6 +4,7 @@ import Clavier from '../B/Clavier.jsx'
 import Compteur from '../C/Compteur.jsx'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import {Container} from 'react-bootstrap'
 
 const mots = ["ARGILE","CHAISE","WHISKY","JOYEUX","IMMENSE","IMAGES", "ACCOUCHE","ACHARNER","BOHNOMME","GUIRLANDE","DIVERSION","ECLAIRAGES","MUSCULATION"]
 const lettresAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -81,6 +82,7 @@ class App extends Component {
             <div>
                 <div>
                     <h1>Jeu du pendu</h1>
+                    <h2>{mots.length} mots dans la liste</h2>
                     <button className="btn btn-info" onClick={this.nouvellePartie}>Nouvelle partie</button>
                 </div>
                 <div>
