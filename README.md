@@ -4,8 +4,8 @@
 
 - Les modifications réalisées sur cette branche (versionPerso) ne sont pas à prendre en compte pour la notation de l'examen.
 
-1. Message à la pédagogie : 
-    - Sauf erreur de ma part, il n'y aura pas de merge avec la branche (main), dans ce cas contactez moi rapidement afin que je remette le projet tel que rendu en classe dans la branche (main).
+**1. Message à la pédagogie : 
+    - Sauf erreur de ma part, il n'y aura pas de merge avec la branche (main), dans ce cas contactez moi rapidement afin que je remette le projet tel que rendu en classe dans la branche (main).**
 
 --------------------------------------------------------------------
 
