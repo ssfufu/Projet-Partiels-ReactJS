@@ -1,21 +1,23 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+/* import PropTypes from 'prop-types' */
 
-const Compteur = ({compteur, etatDuJeu}) => (
+const Compteur = ({compteur, stateDuJeu}) => (
     <div>Nombre de tentative : {compteur}/8
         <div>
-            Partie {etatDuJeu}
+            Partie {stateDuJeu}
         </div>
     </div>
 )
 
-Compteur.propTypes = {
+export default Compteur
+
+/* Compteur.propTypes = {
     Compteur: PropTypes.number.isRequired,
-    etatDuJeu: PropTypes.oneOf([
+    stateDuJeu: PropTypes.oneOf([
     'en cours',
     'perdu',
     'gagné',
     ]).isRequired,
-}
+} */
 
-export default Compteur
+

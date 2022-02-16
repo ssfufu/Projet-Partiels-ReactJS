@@ -1,0 +1,8 @@
+.liste{
+    list-style-type: none;
+    display: inline;
+}
+
+.listeItems{
+    display: inline;
+}

@@ -4,13 +4,12 @@ import Clavier from '../B/Clavier.jsx'
 import Compteur from '../C/Compteur.jsx'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {Container} from 'react-bootstrap'
+import {Container, Button, Card} from 'react-bootstrap'
 
 const mots = ["PIED","ARMOIRE","CLAVIER","LAMPE","CASQUE","PSYCHOMOTRICIENNE", "REPUBLIQUE","SABLIER","VIRTUALISATION","REFRIGERATEUR","DESOLATION","INNOVATION","COMMODITE"]
 const lettresAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 class App extends Component {
-
     state = {
         lettres : this.generationMots(),
         clavier : this.buildClavier(),
@@ -79,12 +78,15 @@ class App extends Component {
         const {lettres, clavier} = this.state
 
         return (
-            <div>
-                <div>
-                    <h1>Jeu du pendu</h1>
-                    <h2>{mots.length} mots dans la liste</h2>
-                    <button className="btn btn-info" onClick={this.nouvellePartie}>Nouvelle partie</button>
-                </div>
+            <Container>
+                <Card>
+                    <Card.Body className='carteTitre'>
+                        <h1>Jeu du pendu</h1>
+                        <h2>{mots.length} mots dans la liste</h2>
+                        <Button onClick={this.nouvellePartie}>Nouvelle partie</Button>
+                    </Card.Body>
+                </Card>
+
                 <div>
                     <div>
                     { lettres.map((lettre, index) => (
@@ -102,20 +104,17 @@ class App extends Component {
                 </div>
 
                 <div className="keyboard">
-                    { clavier.map((lettre, index) => (
+                    {clavier.map((lettre, index) => (
                     <Clavier
                         lettre={lettre}
                         key={index}
                         onClick={this.clickH}
-                        feedback={this.feedback(lettre) ? "gray" : "#17a2b8"}
+                        feedback={this.feedback(lettre) ? "gray" : "white"}
                     />
                     ))}
                 </div>
-            </div>
-
+            </Container>
         )
-
-
     }
 }
 
