@@ -6,7 +6,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Container} from 'react-bootstrap'
 
-const mots = ["ARGILE","CHAISE","WHISKY","JOYEUX","IMMENSE","IMAGES", "ACCOUCHE","ACHARNER","BOHNOMME","GUIRLANDE","DIVERSION","ECLAIRAGES","MUSCULATION"]
+const mots = ["PIED","ARMOIRE","CLAVIER","LAMPE","CASQUE","PSYCHOMOTRICIENNE", "REPUBLIQUE","SABLIER","VIRTUALISATION","REFRIGERATEUR","DESOLATION","INNOVATION","COMMODITE"]
 const lettresAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 class App extends Component {
