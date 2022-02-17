@@ -1,4 +1,8 @@
 *{
-    background-color : #1c1c1e ;
-    color : #fefefe ;
+    color : black ;
+}
+
+h1, h2{
+    color: white;
+    text-align: center;
 }
