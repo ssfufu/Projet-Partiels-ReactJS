@@ -5,7 +5,7 @@ import Compteur from '../C/Compteur.jsx'
 import HeaderJS from '../Pages/header.jsx';
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Button, Card} from 'react-bootstrap'
+import {Container, Button, Card, Row, Col} from 'react-bootstrap'
 
 
 const mots = ["PIED","ARMOIRE","CLAVIER","LAMPE","CASQUE","PSYCHOMOTRICIENNE", "REPUBLIQUE","SABLIER","VIRTUALISATION","REFRIGERATEUR","DESOLATION","INNOVATION","COMMODITE"]
@@ -80,7 +80,7 @@ class App extends Component {
         const {lettres, clavier} = this.state
 
         return (
-            <>
+            <Container className='bodyWhole'>
                 <HeaderJS/>
                 <Container className='bgAPP'>
                     <Card className='bg-dark'>
@@ -91,8 +91,8 @@ class App extends Component {
                         </Card.Body>
                     </Card>
 
-                    <div>
-                        <div>
+                    <Card>
+                        <Card.Body>
                         { lettres.map((lettre, index) => (
                             <Lettre
                             lettre={lettre}
@@ -100,25 +100,27 @@ class App extends Component {
                             key={index}
                             />
                         ))}
-                        </div>
+                        </Card.Body>
                         <Compteur
                         compteur = {this.essai()}
                         stateDuJeu = {this.state.stateDuJeu}
                         />
-                    </div>
+                    </Card>
 
-                    <div className="keyboard">
+                    <Container>
+                        <Row>
                         {clavier.map((lettre, index) => (
-                        <Clavier
-                            lettre={lettre}
-                            key={index}
-                            onClick={this.clickH}
-                            feedback={this.feedback(lettre) ? "gray" : "white"}
-                        />
+                            <Clavier
+                                lettre={lettre}
+                                key={index}
+                                onClick={this.clickH}
+                                feedback={this.feedback(lettre) ? "orange" : "white"}
+                            />
                         ))}
-                    </div>
+                        </Row>
+                    </Container>
                 </Container>
-            </>
+            </Container>
         )
     }
 }

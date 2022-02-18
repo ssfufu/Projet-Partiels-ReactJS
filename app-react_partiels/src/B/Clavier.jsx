@@ -1,13 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import {Col} from 'react-bootstrap'
 
 
 const Clavier = ({ lettre, onClick, feedback}) => (
-  <div style={{backgroundColor: `${feedback}`, display: 'inline', fontSize:'2.5em',paddingBottom:'50px', marginRight:'10px'}}className={"lettre"} onClick={() => onClick(lettre)}>
+  <Col style={{backgroundColor: `${feedback}`,textAlign:'center', width:'50px',fontSize:'1.5em'}}className={"lettre"} onClick={() => onClick(lettre)}>
     <span>
     {lettre}
     </span>
-  </div>
+  </Col>
 )
 
 export default Clavier

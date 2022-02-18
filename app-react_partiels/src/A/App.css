@@ -6,3 +6,8 @@ h1, h2{
     color: white;
     text-align: center;
 }
+
+.bodyWhole{
+    background-color:grey;
+    height: 100vh;
+}

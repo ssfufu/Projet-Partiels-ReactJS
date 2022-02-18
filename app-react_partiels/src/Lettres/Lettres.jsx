@@ -1,6 +1,5 @@
 import React from 'react'
 import '../Styles/lettres.css'
-import PropTypes from 'prop-types'
 
 const HIDDEN_SYMBOL = '___'
 
