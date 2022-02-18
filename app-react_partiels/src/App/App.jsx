@@ -5,7 +5,7 @@ import Compteur from '../Pages/Compteur.jsx'
 import HeaderJS from '../Pages/header.jsx';
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Button, Card, Row, Col} from 'react-bootstrap'
+import {Container, Button, Card, Row} from 'react-bootstrap'
 
 
 const mots = ["PIED","ARMOIRE","CLAVIER","LAMPE","CASQUE","PSYCHOMOTRICIENNE", "REPUBLIQUE","SABLIER","VIRTUALISATION","REFRIGERATEUR","DESOLATION","INNOVATION","COMMODITE"]
