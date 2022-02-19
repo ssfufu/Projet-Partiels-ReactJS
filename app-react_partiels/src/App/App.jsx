@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
-import Lettre from '../Pages/Lettres.jsx'
+import Lettre from '../Pages/Mots.jsx'
 import Clavier from '../Pages/Clavier.jsx'
 import Compteur from '../Pages/Compteur.jsx'
-import HeaderJS from '../Pages/header.jsx';
+import HeaderJS from '../Pages/Header.jsx';
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container, Button, Card, Row} from 'react-bootstrap'
 
 
-const mots = ["PIED","ARMOIRE","CLAVIER","LAMPE","CASQUE","PSYCHOMOTRICIENNE", "REPUBLIQUE","SABLIER","VIRTUALISATION","REFRIGERATEUR","DESOLATION","INNOVATION","COMMODITE"]
-const lettresAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+const mots = ["PIED","MATELAS","HISTORIQUEMENT",
+    "LAMENTABLE","ALEATOIRE","NUMERIQUE","MOTIVATION",
+    "ORDINATEUR","ARMOIRE","CLAVIER","LAMPE","CASQUE",
+    "PSYCHOMOTRICIENNE", "REPUBLIQUE","SABLIER","VIRTUALISATION",
+    "REFRIGERATEUR","DESOLATION","INNOVATION","COMMODITE",
+    "FLOCON", "NAPOLEON","ECHAPPATOIRE","REMORD","TORT","AXIOME",
+    "ELEVATEUR","DEVOIR","NATION","HONNEUR","COURAGE","FRANCE",
+];
+
+const lettresAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 export default class App extends Component {
 
@@ -72,11 +80,11 @@ export default class App extends Component {
         const rechercheMot = lettres.filter(element => selection.includes(element)).length === lettres.length;
 
         if(tests > 0 && rechercheMot){
-            this.setState({stateDuJeu : "gagnée avec succès"});
+            this.setState({stateDuJeu : "gagnée"});
         } else if (tests > 0){
             return
         } else {
-            this.setState({stateDuJeu : "perdu avec succès!!"});
+            this.setState({stateDuJeu : "échouée"});
         }
     }
 
@@ -110,7 +118,7 @@ export default class App extends Component {
                     </Card>
 
                     {/* RETURN MOTS + COMPTEUR */}
-                    <Card>
+                    <Card className='bg-dark' >
                         <Card.Body>
                         { lettres.map((lettre, index) => (
                             <Lettre

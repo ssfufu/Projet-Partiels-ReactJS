@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Styles/lettres.css'
 
-const HIDDEN_SYMBOL = '__'
+const HIDDEN_SYMBOL = '_'
 
 const Lettre = ({ lettre, feedback}) => (
     <ul horizontal className={`lettre ${feedback} liste`}>

@@ -1,6 +1,7 @@
 *{
     color : black ;
     margin-top: 10px;
+    font-family: monospace;
 }
 
 h1, h2{
@@ -9,6 +10,6 @@ h1, h2{
 }
 
 .bodyWhole{
-    background-color:grey;
+    background-color:green;
     height: 95vh;
 }
